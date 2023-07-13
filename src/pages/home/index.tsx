@@ -1,14 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+
+import {useTranslation} from 'react-i18next';
+import {HomeIcon} from '@/assets/icons';
 
 const HomePage = () => {
+  const {t} = useTranslation();
+
   return (
     <View>
-      <Text>HomePage</Text>
+      <HomeIcon color={"black"} width={50} height={50} />
+      <Text>HomePage {t('home')}</Text>
     </View>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
