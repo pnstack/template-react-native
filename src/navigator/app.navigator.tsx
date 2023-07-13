@@ -1,21 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import StackNavigator from './stack.navigator';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import TabNavigator from './tab.navigator';
 
-const RootNavigator = () => {
+const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <SafeAreaProvider>
-        <StackNavigator />
-        {/* <TabNavigator /> */}
-      </SafeAreaProvider>
+      <StackNavigator />
     </NavigationContainer>
   );
 };
-
-export default RootNavigator;
-
-const styles = StyleSheet.create({});
+export default AppNavigator;

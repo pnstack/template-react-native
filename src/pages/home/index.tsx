@@ -11,8 +11,11 @@ const HomePage = () => {
   return (
     <>
       {/* <HomeIcon color={"black"} width={50} height={50} />
-      <Text>HomePage {t('home')}</Text> */}
-      <TabNavigator />
+      // <Text>HomePage {t('home')}</Text> */}
+      {/* <TabNavigator /> */}
+      <View>
+        <Text>Hello</Text>
+      </View>
     </>
   );
 };
