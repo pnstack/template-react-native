@@ -17,3 +17,6 @@ npx react-native@latest init project-name
 ## Libraries
 
 - [React Navigation](https://reactnavigation.org/docs/getting-started)
+- [React native svg](https://www.npmjs.com/package/react-native-svg)
+- [i18next](https://www.i18next.com/)
+- [Async Storage](https://react-native-async-storage.github.io/async-storage/docs/install)
