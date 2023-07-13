@@ -1,6 +1,7 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomePage from '../pages';
 import {HomeIcon} from '@/assets/icons';
+import HomePage from '@/modules/home/pages';
+
 
 const {Navigator, Screen} = createBottomTabNavigator();
 export enum TabPage {

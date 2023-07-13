@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import {StyleSheet} from 'react-native';
+import Navigator from './navigator';
 
 const HomeModule = () => {
   return (
-    <View>
-      <Text>HomeModule</Text>
-    </View>
-  )
-}
+    <>
+      <Navigator />
+    </>
+  );
+};
 
-export default HomeModule
+export default HomeModule;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
