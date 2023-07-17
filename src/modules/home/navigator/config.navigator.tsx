@@ -1,28 +1,14 @@
-import HomePage from '@/pages/home';
-import SplashPage from '@/pages/splash';
+import HomePage from '../pages';
 import TabNavigator from './tab.navigator';
-import HomeModule from '@/modules/home';
 
 export enum StackPage {
-  Splash = 'Splash',
-  HomeModule = 'HomeModule',
-  Main = 'Main',
+  Home = 'HomeTab',
 }
-export const StackDefault = StackPage.Main;
+export const StackDefault = StackPage.Home;
 
 export const StackPageNavigation = [
   {
-    name: StackPage.Splash,
-    component: SplashPage,
-    options: {},
-  },
-  {
-    name: StackPage.HomeModule,
-    component: HomeModule,
-    options: {},
-  },
-  {
-    name: StackPage.Main,
+    name: StackPage.Home,
     component: TabNavigator,
     options: {},
   },

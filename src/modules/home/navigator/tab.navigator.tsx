@@ -1,26 +1,9 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomePage from '../pages';
-import {HomeIcon} from '@/assets/icons';
+import { HomeIcon } from '@/assets/icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { TabDefault, TabPageNavigation } from './config.navigator';
 
 const {Navigator, Screen} = createBottomTabNavigator();
-export enum TabPage {
-  Home = 'home',
-  Settings = 'settings',
-}
-export const TabDefault = TabPage.Home;
 
-export const TabPageNavigation = [
-  {
-    name: TabPage.Home,
-    component: HomePage,
-    options: {},
-  },
-  {
-    name: TabPage.Settings,
-    component: HomePage,
-    options: {},
-  },
-];
 const TabNavigator = () => {
   return (
     <Navigator
