@@ -1,3 +1,4 @@
-import HomeIcon from "./svgs/home.svg"
+import HomeIcon from "./home.svg"
+import SettingIcon from "./setting.svg"
 
-export { HomeIcon }
+export { HomeIcon, SettingIcon }

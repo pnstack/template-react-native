@@ -2,6 +2,8 @@ import HomePage from '@/pages/home';
 import SplashPage from '@/pages/splash';
 import TabNavigator from './tab.navigator';
 import HomeModule from '@/modules/home';
+import { HomeIcon, SettingIcon } from '@/assets/icons';
+import SettingsPage from '@/pages/settings';
 
 export enum StackPage {
   Splash = 'Splash',
@@ -38,11 +40,15 @@ export const TabPageNavigation = [
   {
     name: TabPage.Home,
     component: HomePage,
-    options: {},
+    options: {
+      tabBarIcon: HomeIcon,
+    },
   },
   {
     name: TabPage.Settings,
-    component: HomePage,
-    options: {},
+    component: SettingsPage,
+    options: {
+      tabBarIcon: SettingIcon,
+    },
   },
 ];

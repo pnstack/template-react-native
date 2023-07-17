@@ -18,7 +18,6 @@ const TabNavigator = () => {
           component={item.component}
           options={{
             ...item.options,
-            tabBarIcon: HomeIcon,
           }}
         />
       ))}
