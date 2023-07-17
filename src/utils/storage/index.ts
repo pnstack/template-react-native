@@ -1,20 +1,44 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {StorageKey} from '@/common/enums';
+import {MMKV} from 'react-native-mmkv';
+import {Logger} from '../logger';
+export const storageApp = new MMKV({
+  id: 'app-storage',
+  encryptionKey: 'app-storage-encryption-key',
+});
+export const getAsyncStorage = (
+  key: StorageKey,
+  fallback?: string,
+): string | undefined => {
+  try {
+    return storageApp.getString(key) ?? fallback;
+  } catch (err) {
+    const logger = new Logger(`${key}-Storage`);
+    logger.error(err);
+    return fallback;
+  }
+};
 
-export async function getStorageValue(key: string, defaultValue?: string) {
+export const setAsyncStorage = (
+  key: StorageKey,
+  value?: string | null | undefined,
+) => {
   try {
-    const _value = await AsyncStorage.getItem(key);
-    if (_value !== null) {
-      return _value;
+    if (value != null) {
+      storageApp.set(key, value);
+    } else {
+      storageApp.delete(key);
     }
-    return defaultValue;
-  } catch (error) {
-    return defaultValue;
+  } catch (err) {
+    const logger = new Logger(`${key}-Storage`);
+    logger.error(err);
   }
-}
-export async function setStorageValue(key: string, value: string) {
+};
+
+export const deleteAsyncStorage = (key: StorageKey) => {
   try {
-    await AsyncStorage.setItem(key, value);
-  } catch (error) {
-    throw error;
+    storageApp.delete(key);
+  } catch (err) {
+    const logger = new Logger(`${key}-Storage`);
+    logger.error(err);
   }
-}
+};

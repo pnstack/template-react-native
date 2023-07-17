@@ -3,8 +3,8 @@ import ViTranslation from './vi.json';
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 import {Resource} from 'i18next';
-import {getStorageValue, setStorageValue} from '@/utils/storage';
-import {STORAGE_KEY} from '@/common/enums';
+import {StorageKey} from '@/common/enums';
+import {getAsyncStorage, setAsyncStorage} from '@/utils/storage';
 
 export enum AvailableLang {
   En = 'en',
@@ -29,8 +29,8 @@ i18n
     type: 'languageDetector',
     async: true,
     detect: async (callback: any) => {
-      const selectedLanguage = await getStorageValue(
-        STORAGE_KEY.LANGUAGE,
+      const selectedLanguage = await getAsyncStorage(
+        StorageKey.LANGUAGE,
         DefaultLanguage,
       );
       if (selectedLanguage) {
@@ -50,7 +50,7 @@ i18n
   });
 
 i18n.on('languageChanged', async (language: string) => {
-  await setStorageValue(STORAGE_KEY.LANGUAGE, language);
+  await setAsyncStorage(StorageKey.LANGUAGE, language);
 });
 
 export default i18n;
