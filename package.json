@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "start": "react-native start",
     "start:clean": "react-native start --reset-cache",
+    "link:assets": "npx react-native-asset",
     "test": "jest"
   },
   "dependencies": {
