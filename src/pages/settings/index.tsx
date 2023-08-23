@@ -1,6 +1,7 @@
 import {Button, StyleSheet, Text, View} from 'react-native';
 import React, {useContext} from 'react';
 import {AppContext} from '@/contexts/AppContext';
+import {Table} from '@/components/Table';
 
 const SettingsPage = () => {
   const {isDark, toggleTheme} = useContext(AppContext);
@@ -14,6 +15,8 @@ const SettingsPage = () => {
         }}
         title="toggleTheme"
       />
+
+     
     </View>
   );
 };

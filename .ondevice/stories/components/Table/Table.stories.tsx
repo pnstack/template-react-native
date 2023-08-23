@@ -1,11 +1,12 @@
+import { Table } from '@/components/Table';
 import {Button} from '@/components/ui';
 import {Meta, StoryObj} from '@storybook/react-native';
 import React from 'react';
 import {Text, View} from 'react-native';
 
-const MyButtonMeta: Meta = {
-  title: 'components/Button',
-  component: Button,
+const TableMeta: Meta = {
+  title: 'components/Table',
+  component: Table,
   args: {
     children: <Text>Button</Text>,
   },
@@ -18,8 +19,8 @@ const MyButtonMeta: Meta = {
   ],
 };
 
-export default MyButtonMeta;
-type Story = StoryObj<typeof Button>;
+export default TableMeta;
+type Story = StoryObj<typeof Table>;
 
 export const Basic = {};
 

@@ -5,6 +5,7 @@ import {useTranslation} from 'react-i18next';
 import {HomeIcon} from '@/assets/icons';
 import TabNavigator from '@/navigator/tab.navigator';
 import {AppContext} from '@/contexts/AppContext';
+import { Table } from '@/components/Table';
 
 const HomePage = () => {
   const {t} = useTranslation();
@@ -16,6 +17,29 @@ const HomePage = () => {
         <TouchableOpacity className="w-10 h-10 bg-red-500 md:w-20 md:h-20 hover:bg-yellow-600 focus:bg-yellow-800 visited:bg-yellow-200">
           <Text>World</Text>
         </TouchableOpacity>
+        <Table
+          columns={[
+            {
+              title: 'id',
+              key: 'id',
+              dataIndex: 'id',
+            },
+            {
+              title: 'Name',
+              key: 'name',
+              dataIndex: 'id',
+            },
+          ]}
+          dataSource={[
+            {
+              id: 1,
+              name: 'name 1',
+            },
+            {
+              id: 2,
+              name: 'name 2',
+            },
+          ]}></Table>
       </View>
     </>
   );
