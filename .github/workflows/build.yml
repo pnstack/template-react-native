@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/pnstack/codespace/react-native:latest
+    defaults:
+      run:
+        working-directory: /
     steps:
       - uses: actions/checkout@v3
 
