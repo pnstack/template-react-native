@@ -2,26 +2,18 @@ name: react-native-android-build-apk
 on:
   push:
     branches:
-      - develop
-      - master
+      - feature/github-action-docker
 
 jobs:
-  build-android:
+  build-android-container:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/pnstack/codespace/react-native:latest
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: yarn
-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-
-      - name: Install npm dependencies
-        run: |
-          npm install --legacy-peer-deps
 
       - name: Build Android Release
         run: |
