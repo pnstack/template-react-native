@@ -13,6 +13,7 @@ npx react-native@latest init project-name
 - java 11
 - node 16.14.2 or up
 
+### Macos
 
 ## Libraries
 
