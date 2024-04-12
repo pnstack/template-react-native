@@ -10,9 +10,7 @@ jobs:
     container:
       image: ghcr.io/pnstack/codespace/react-native:latest
       options: --user root
-    defaults:
-      run:
-        working-directory: /
+
     steps:
       - uses: actions/checkout@v3
 
