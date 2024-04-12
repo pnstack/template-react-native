@@ -23,7 +23,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Ls
-        run: ls -la
+        run: cd __w && ls -la
 
       - name: Build Android Release
         run: |
