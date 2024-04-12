@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/pnstack/codespace/react-native:latest
+      options: --user root
     defaults:
       run:
         working-directory: /
@@ -20,6 +21,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+
+      - name: Ls
+        run: ls -la
 
       - name: Build Android Release
         run: |
