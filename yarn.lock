@@ -10466,10 +10466,10 @@ react-native-dev-menu@^4.1.1:
   resolved "https://registry.yarnpkg.com/react-native-dev-menu/-/react-native-dev-menu-4.1.1.tgz#7e2b3bfa7345946330ead3d0696b5de257c55553"
   integrity sha512-jdYjoTpFHvGXW12enaTnrgOoEgVF5JVqv4hcO8K0KV66Cvk8YLwD3XHsEiqMat+4C1osa+IG5Yt3qAiMOLBQxQ==
 
-react-native-mmkv@^2.10.1:
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.10.1.tgz#1a4e64edbf9561fe81a5ae3cefde17e88dfc669f"
-  integrity sha512-MCrYytUJ3JhSVg7LwVXCj7ExbMHe48FoQdDA1xo1q/M4c1/QyI3M9L9d2dyJUhYPnsSO0+5c2mJICm7v39XA0w==
+react-native-mmkv@^2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.11.0.tgz#51b9985f6a5c09fe9c16d8c1861cc2901856ace1"
+  integrity sha512-28PdUHjZJmAw3q+8zJDAAdohnZMpDC7WgRUJxACOMkcmJeqS3u5cKS/lSq2bhf1CvaeIiHYHUWiyatUjMRCDQQ==
 
 react-native-modal-datetime-picker@^14.0.0:
   version "14.0.1"
